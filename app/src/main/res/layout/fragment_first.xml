@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".FirstFragment">
+
+    <ImageView
+        android:id="@+id/img_fondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:src="@drawable/fondo" />
+
+    <Button
+        android:id="@+id/btn_detalle"
+        android:layout_width="110dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="44dp"
+        android:text="Detalles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_historia"
+        android:layout_width="110dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="120dp"
+        android:text="Historia"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_detalle"
+        app:layout_constraintStart_toStartOf="@+id/btn_detalle"
+        app:layout_constraintTop_toTopOf="@+id/btn_detalle"
+        app:layout_constraintVertical_bias="0.71000004" />
+
+    <Button
+        android:id="@+id/btn_objetos"
+        android:layout_width="110dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="24dp"
+        android:text="Objetos"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_historia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_historia"
+        app:layout_constraintTop_toTopOf="@+id/btn_historia" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
