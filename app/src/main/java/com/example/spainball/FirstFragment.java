@@ -32,6 +32,8 @@ public class FirstFragment extends Fragment {
         binding.btnDetalle.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
+
+
             }
         });
     }
