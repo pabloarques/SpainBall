@@ -6,10 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.spainball.databinding.FragmentFirstBinding;
+
+import org.jetbrains.annotations.Contract;
 
 public class FirstFragment extends Fragment {
 
@@ -29,14 +35,9 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.btnDetalle.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-
-
-            }
-        });
+       binding.btnDetalle.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_FirstFragment_to_SecondFragment));
     }
+
 
     @Override
     public void onDestroyView() {
