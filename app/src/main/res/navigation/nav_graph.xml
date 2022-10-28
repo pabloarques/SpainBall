@@ -24,5 +24,17 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_personajesVista"
+            app:destination="@id/personajesVista" />
+    </fragment>
+    <fragment
+        android:id="@+id/personajesVista"
+        android:name="com.example.spainball.personajesVista"
+        android:label="fragment_personajes_vista"
+        tools:layout="@layout/fragment_personajes_vista" >
+        <action
+            android:id="@+id/action_personajesVista_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
     </fragment>
 </navigation>
