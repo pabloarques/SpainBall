@@ -24,9 +24,9 @@ public class PersonajesAdapter extends ArrayAdapter<Personajes> {
 
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
-            convertView = inflater.inflate(R.layout.fragment_second, parent, false);
+            convertView = inflater.inflate(R.layout.lv_personajes, parent, false);
         }
-    /*
+
             TextView txtNombre = convertView.findViewById(R.id.txt_nombre);
             ImageView imagen = convertView.findViewById(R.id.img_per);
 
@@ -35,7 +35,7 @@ public class PersonajesAdapter extends ArrayAdapter<Personajes> {
             Glide.with(getContext()).load(
                     personaje.getImagen()
             ).into(imagen);
-    */
+
         return convertView;
     }
 }

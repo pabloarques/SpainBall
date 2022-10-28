@@ -21,6 +21,7 @@ public class PersonajesApi {
 
     ArrayList<Personajes> personajeArray = new ArrayList<>();
     for(int i=0; i <results.length(); i++){
+
         JSONObject personajeJson = results.getJSONObject(i);
         Personajes personaje = new Personajes();
 
@@ -31,7 +32,6 @@ public class PersonajesApi {
         personaje.setImagen(sprites);
 
         personajeArray.add(personaje);
-       // Log.e("PRUEBA", personaje.getNombre());
     }
 
         return personajeArray;
