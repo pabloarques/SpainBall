@@ -77,7 +77,7 @@ public class SecondFragment extends Fragment {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
             PersonajesApi api = new PersonajesApi();
-            ArrayList<Personajes> personajes = api.getPokemon();
+            ArrayList<Personajes> personajes = api.getPersonaje();
             handler.post(() -> {
                 adapter.clear();
                 adapter.addAll(personajes);

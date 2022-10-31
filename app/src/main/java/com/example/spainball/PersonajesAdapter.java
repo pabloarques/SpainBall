@@ -1,6 +1,7 @@
 package com.example.spainball;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,9 +34,10 @@ public class PersonajesAdapter extends ArrayAdapter<Personajes> {
             txtNombre.setText(personaje.getNombre());
 
             Glide.with(getContext()).load(
+
                     personaje.getImagen()
             ).into(imagen);
-
         return convertView;
     }
+
 }

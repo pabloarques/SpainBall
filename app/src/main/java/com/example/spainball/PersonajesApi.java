@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class PersonajesApi {
 
-    ArrayList<Personajes> getPokemon(){
+    ArrayList<Personajes> getPersonaje(){
     String url = "https://ydbbirhldzcaggqvhltp.supabase.co/rest/v1/personajes?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlkYmJpcmhsZHpjYWdncXZobHRwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjY2OTUxNTAsImV4cCI6MTk4MjI3MTE1MH0.UMO3HMblINIkVW20KROL9-KNvZfBZAko0F_KmcX3-4k";
 
     try{
