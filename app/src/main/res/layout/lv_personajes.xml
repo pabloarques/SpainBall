@@ -5,10 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/txt_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#72000000"
+        app:layout_constraintBottom_toBottomOf="@+id/img_per"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_per"
+        app:layout_constraintVertical_bias="1.0" />
+
     <ImageView
         android:id="@+id/img_per"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="156dp"
         android:text="Nombre"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/img_per"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.351"
