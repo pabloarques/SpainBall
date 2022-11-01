@@ -6,10 +6,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +16,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.spainball.databinding.FragmentSecondBinding;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -53,11 +52,14 @@ public class SecondFragment extends Fragment {
         binding.lvPersonajes.setAdapter(adapter);
         refresh();
 
+
         binding.lvPersonajes.setOnItemClickListener((adapter, fragment, i, l) -> {
             Personajes per = (Personajes) adapter.getItemAtPosition(i);
             Bundle args = new Bundle();
 
-            args.putSerializable("items", items);
+            Personajes item = (Personajes) adapter.getItemAtPosition(i);
+
+            args.putSerializable("item", item);
 
             NavHostFragment.findNavController(SecondFragment.this)
                     .navigate(R.id.action_SecondFragment_to_personajesVista, args);
@@ -66,9 +68,8 @@ public class SecondFragment extends Fragment {
 
     }
 
-
-    private void refresh () {
-        Toast.makeText(getContext(), "Refrescando...", Toast.LENGTH_LONG).show();
+    public void refresh () {
+        //Toast.makeText(getContext(), "Refrescando...", Toast.LENGTH_LONG).show();
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Handler handler = new Handler(Looper.getMainLooper());
 

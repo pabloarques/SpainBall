@@ -1,19 +1,21 @@
 package com.example.spainball;
 
+
 import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-public class Personajes {
+import java.io.Serializable;
 
+@Entity
+public class Personajes implements Serializable {
+    @PrimaryKey(autoGenerate = true)
     private Integer id;
     private String nombre;
     private String raza;
     private Integer nivelPoder;
     private String imagen;
 
-
-    public Personajes() {
-
-    }
 
     public Integer getId() {
         return id;
@@ -55,6 +57,7 @@ public class Personajes {
         this.imagen = imagen;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Personajes{" +
