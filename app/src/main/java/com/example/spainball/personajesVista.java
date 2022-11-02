@@ -61,9 +61,9 @@ public class personajesVista extends Fragment {
 
     private void actualizar(@NonNull Personajes personaje){
 
-        binding.txtNombre2.setText(personaje.getNombre());
-        binding.txtRaza.setText(personaje.getRaza());
-        binding.txtPoder2.setText(String.valueOf(personaje.getNivelPoder()));
+        binding.txtNombre2.setText("Nombre: "+ personaje.getNombre());
+        binding.txtRaza.setText("Raza: "+personaje.getRaza());
+        binding.txtPoder2.setText("Nivel de Poder: "+ String.valueOf(personaje.getNivelPoder()));
 
         Glide.with(getContext()).load(
                 personaje.getImagen()

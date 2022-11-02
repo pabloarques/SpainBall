@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/personajesVista4">
+    <fragment
+        android:id="@+id/personajesVista4"
+        android:name="com.example.spainball.personajesVista"
+        android:label="fragment_personajes_vista"
+        tools:layout="@layout/fragment_personajes_vista" >
+        <action
+            android:id="@+id/action_personajesVista4_self"
+            app:destination="@id/personajesVista4" />
+    </fragment>
+</navigation>

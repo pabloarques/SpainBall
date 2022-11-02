@@ -49,8 +49,16 @@ public class SecondFragment extends Fragment {
 
             args.putSerializable("item", item);
 
-            NavHostFragment.findNavController(SecondFragment.this)
-                    .navigate(R.id.action_SecondFragment_to_personajesVista, args);
+            if (!esTablet()){
+                NavHostFragment.findNavController(
+                this
+                ).navigate(R.id.action_SecondFragment_to_personajesVista, args);
+            } else {
+                NavHostFragment.findNavController(
+                        this
+                ).navigate(R.id.action_personajesVista4_self, args);
+
+            }
 
         });
 
@@ -60,6 +68,10 @@ public class SecondFragment extends Fragment {
             adapter.addAll(personajes);
         });
         model.refresh();
+    }
+
+    boolean esTablet() {
+        return getResources().getBoolean(R.bool.tablet);
     }
 
     @Override

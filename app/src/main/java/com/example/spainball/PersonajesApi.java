@@ -1,10 +1,5 @@
 package com.example.spainball;
 
-import android.util.Log;
-
-import com.example.spainball.HttpsUtils;
-import com.example.spainball.Personajes;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
