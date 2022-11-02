@@ -2,6 +2,7 @@ package com.example.spainball;
 
 import android.app.Application;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 
 import androidx.annotation.NonNull;
@@ -28,12 +29,9 @@ public class PersonajesViewModel extends AndroidViewModel {
 
     }
 
-    public LiveData<List<Personajes>> getPersonajes() {
-        if(personajes == null){
-         personajes = new MutableLiveData<>();
+        public LiveData<List<Personajes>> getPersonajes() {
 
-        }
-        return personajes;
+        return personajesDao.getPersonajes();
     }
 
     public void refresh(){

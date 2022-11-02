@@ -1,35 +1,27 @@
 package com.example.spainball;
 
-import android.content.SharedPreferences;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
-
 import com.example.spainball.databinding.FragmentSecondBinding;
-
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
     private PersonajesAdapter adapter;
     private ArrayList<Personajes> items;
+    private  PersonajesViewModel model;
 
     @Override
     public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
+            @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
 
@@ -38,9 +30,9 @@ public class SecondFragment extends Fragment {
 
     }
 
+    @SuppressLint("FragmentLiveDataObserve")
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
 
         items = new ArrayList<>();
         adapter = new PersonajesAdapter(
@@ -50,11 +42,7 @@ public class SecondFragment extends Fragment {
         );
 
         binding.lvPersonajes.setAdapter(adapter);
-        refresh();
-
-
         binding.lvPersonajes.setOnItemClickListener((adapter, fragment, i, l) -> {
-            Personajes per = (Personajes) adapter.getItemAtPosition(i);
             Bundle args = new Bundle();
 
             Personajes item = (Personajes) adapter.getItemAtPosition(i);
@@ -66,24 +54,12 @@ public class SecondFragment extends Fragment {
 
         });
 
-    }
-
-    public void refresh () {
-        //Toast.makeText(getContext(), "Refrescando...", Toast.LENGTH_LONG).show();
-        ExecutorService executor = Executors.newSingleThreadExecutor();
-        Handler handler = new Handler(Looper.getMainLooper());
-
-
-        executor.execute(() -> {
-            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-
-            PersonajesApi api = new PersonajesApi();
-            ArrayList<Personajes> personajes = api.getPersonaje();
-            handler.post(() -> {
-                adapter.clear();
-                adapter.addAll(personajes);
-            });
+        model = new ViewModelProvider(getActivity()).get(PersonajesViewModel.class);
+        model.getPersonajes().observe(getActivity(), personajes -> {
+            adapter.clear();
+            adapter.addAll(personajes);
         });
+        model.refresh();
     }
 
     @Override
