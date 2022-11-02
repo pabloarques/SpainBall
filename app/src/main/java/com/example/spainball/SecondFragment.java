@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
+
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.spainball.databinding.FragmentSecondBinding;
+
 import java.util.ArrayList;
 
 public class SecondFragment extends Fragment {
@@ -40,6 +44,7 @@ public class SecondFragment extends Fragment {
                 R.id.txt_nombre,
                 items
         );
+
 
         binding.lvPersonajes.setAdapter(adapter);
         binding.lvPersonajes.setOnItemClickListener((adapter, fragment, i, l) -> {
