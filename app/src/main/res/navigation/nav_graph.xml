@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_creditosFragment"
+            app:destination="@id/creditosFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -36,5 +39,14 @@
         <action
             android:id="@+id/action_personajesVista_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditosFragment"
+        android:name="com.example.spainball.CreditosFragment"
+        android:label="fragment_creditos2"
+        tools:layout="@layout/fragment_creditos2" >
+        <action
+            android:id="@+id/action_creditosFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

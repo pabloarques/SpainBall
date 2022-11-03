@@ -34,6 +34,7 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         binding.btnDetalle.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_FirstFragment_to_SecondFragment));
+        binding.btnCreditos.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_FirstFragment_to_creditosFragment));
     }
 
 

@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.example.spainball.databinding.FragmentSecondBinding;
 
 import java.util.ArrayList;
