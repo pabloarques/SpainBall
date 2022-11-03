@@ -13,16 +13,65 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="¡Hola! Mi nombre es Pablo Arqués, soy el creador de SpainBall"
+            android:text="¡Hola! Mi nombre es Pablo Arqués, soy el creador de SpainBall. Esta app se ha desarrollado con el fin de aprobar el curso y intentar convencer a mi profesor que cumplo con lo necesario para aprobar.
+                                                                                                                                                                                     Si te gusta o estas más interesado en mis proyectos aquí abajo puedes ir a mi github. Y te dejo la Wiki de dragon ball."
             android:textColor="#AEA5A5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.389" />
+            app:layout_constraintVertical_bias="0.398" />
+
+        <ImageView
+            android:id="@+id/img_git"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="22dp"
+            android:onClick="irGithub"
+            android:src="@drawable/git"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="434dp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/spainball"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_bola"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="22dp"
+            android:onClick="irWiki"
+            android:src="@drawable/bola"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintStart_toEndOf="@+id/img_git"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

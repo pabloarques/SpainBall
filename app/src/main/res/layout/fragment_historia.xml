@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141b2e"
+    tools:context=".HistoriaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ¡UPS! de momento el modo historia no esta disponible, en la  segunda evaluación se implantará. Aun asi te dejo un clicker por  si te aburres ^^."
+            android:textColor="#AEA5A5"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/error404"
+            android:layout_width="200dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="76dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/error"
+            app:lottie_repeatMode="restart"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="320dp" />
+
+        <ImageView
+            android:id="@+id/img_goku"
+            android:layout_width="114dp"
+            android:layout_height="238dp"
+            android:src="@drawable/gokuclicker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5"
+            app:layout_constraintVertical_bias="0.433" />
+
+        <Button
+            android:id="@+id/btn_clickame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Clickame!"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_goku"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_clicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#AEA5A5"
+            app:layout_constraintBottom_toTopOf="@+id/img_goku"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

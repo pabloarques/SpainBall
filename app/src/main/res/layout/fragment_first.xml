@@ -44,8 +44,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="350dp"
         android:layout_marginTop="100dp"
         android:src="@drawable/spainball"
         app:layout_constraintEnd_toEndOf="parent"

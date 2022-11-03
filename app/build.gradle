@@ -33,6 +33,11 @@ android {
         exclude 'META-INF/services/javax.annotation.processing.Processor'
     }
 
+    viewBinding {
+        enabled = true
+    }
+
+
 }
 
 dependencies {

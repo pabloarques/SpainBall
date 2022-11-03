@@ -1,5 +1,7 @@
 package com.example.spainball;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -17,12 +19,13 @@ import com.example.spainball.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
-
+    private int contador = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,5 +69,27 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    //Se pone aqui el onclick
+    public void irGithub(View view) {
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/pabloarques"));
+        startActivity(i);
+    }
+
+
+
+    public void irWiki(View view) {
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://dragonball.fandom.com/es/wiki/Dragon_Ball_Wiki_Hispano"));
+        startActivity(i);
+    }
+
+    public void sumarContador(View view) {
+        int contador =0;
+        contador++;
+
+        TextView tx = (TextView) findViewById(R.id.txt_clicker);
+
+        tx.setText(contador);
     }
 }

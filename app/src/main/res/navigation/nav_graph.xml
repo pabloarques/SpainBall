@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_creditosFragment"
             app:destination="@id/creditosFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_historiaFragment"
+            app:destination="@id/historiaFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -47,6 +50,15 @@
         tools:layout="@layout/fragment_creditos2" >
         <action
             android:id="@+id/action_creditosFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historiaFragment"
+        android:name="com.example.spainball.HistoriaFragment"
+        android:label="fragment_historia"
+        tools:layout="@layout/fragment_historia" >
+        <action
+            android:id="@+id/action_historiaFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
