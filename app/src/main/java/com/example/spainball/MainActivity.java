@@ -3,29 +3,21 @@ package com.example.spainball;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.View;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
 import com.example.spainball.databinding.ActivityMainBinding;
-
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
-    private int contador = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,12 +76,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void sumarContador(View view) {
-        int contador =0;
-        contador++;
-
-        TextView tx = (TextView) findViewById(R.id.txt_clicker);
-
-        tx.setText(contador);
-    }
 }

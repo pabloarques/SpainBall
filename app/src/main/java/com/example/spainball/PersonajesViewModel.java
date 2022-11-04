@@ -2,14 +2,11 @@ package com.example.spainball;
 
 import android.app.Application;
 import android.content.SharedPreferences;
-import android.os.AsyncTask;
 import android.preference.PreferenceManager;
-
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -35,6 +32,7 @@ public class PersonajesViewModel extends AndroidViewModel {
     }
 
     public void refresh(){
+        Toast.makeText(getApplication().getApplicationContext(), "Actualizando...", Toast.LENGTH_LONG).show();
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(
                 app.getApplicationContext()
         );
